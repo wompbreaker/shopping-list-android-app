@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorDirtyWhite"
+    tools:context=".WelcomeActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alef"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textAllCaps="true"
+        android:textColor="@color/colorDark"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvUserWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alef"
+        android:gravity="center"
+        android:text="@string/user"
+        android:textAllCaps="true"
+        android:textColor="@color/colorDarkBrown"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/buttonNewList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_button1"
+            android:fontFamily="@font/alef"
+            android:text="@string/new_list"
+            android:textSize="18sp"
+            android:textColor="@color/colorDirtyWhite"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonSeeLists"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_button1"
+            android:enabled="false"
+            android:textSize="18sp"
+            android:fontFamily="@font/alef"
+            android:text="@string/see_my_lists"
+
+            android:textColor="@color/colorDirtyWhite"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

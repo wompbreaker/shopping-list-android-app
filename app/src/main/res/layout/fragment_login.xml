@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorDirtyWhite"
+    tools:context=".LoginFragment">
+
+    <EditText
+        android:id="@+id/etUsernameFragLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/alef"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:textSize="18sp"
+        android:textColorHint="@color/colorDark" />
+
+    <EditText
+        android:id="@+id/etPasswordFragLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/alef"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="18sp"
+        android:textColorHint="@color/colorDark" />
+
+    <Button
+        android:id="@+id/buttonLoginFragLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_button"
+        android:fontFamily="@font/alef"
+        android:text="@string/login"
+        android:textColor="@color/colorDark"
+        android:textStyle="bold" />
+
+</LinearLayout>
