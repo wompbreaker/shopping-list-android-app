@@ -29,28 +29,22 @@ public class WelcomeActivity extends AppCompatActivity {
         tvUserWelcome.setText(username);
 
         // build an alert dialog for confirmation of making a new list
-        btnNewList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                tvTitle.setText(getString(R.string.list_title));
-                AlertDialog.Builder builder = new AlertDialog.Builder(WelcomeActivity.this);
-                builder.setTitle(R.string.new_list_dialog)
-                        .setMessage(R.string.are_you_sure)
-                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                Intent intent = new Intent(WelcomeActivity.this,
-                                        NewListActivity.class);
-                                Bundle bundle = new Bundle();
-                                bundle.putString("user", username);
-                                intent.putExtras(bundle);
-                                startActivity(intent);
-                            }
-                        });
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
+        btnNewList.setOnClickListener(view -> {
+            tvTitle.setText(getString(R.string.list_title));
+            AlertDialog.Builder builder = new AlertDialog.Builder(WelcomeActivity.this);
+            builder.setTitle(R.string.new_list_dialog)
+                    .setMessage(R.string.are_you_sure)
+                    .setPositiveButton(R.string.yes, (dialogInterface, i) -> {
+                        Intent intent = new Intent(WelcomeActivity.this,
+                                NewListActivity.class);
+                        Bundle bundle1 = new Bundle();
+                        bundle1.putString("user", username);
+                        intent.putExtras(bundle1);
+                        startActivity(intent);
+                    });
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
 
-            }
         });
     }
 }
